@@ -4,64 +4,419 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Channyung Lee</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        nav {
+            margin-top: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ecf0f1;
+            text-decoration: underline;
+        }
+        
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .research-item, .education-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .research-item h4, .education-item h4 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .research-meta, .education-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .publication a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .publication a:hover {
+            text-decoration: underline;
+        }
+        
+        .equal-contribution {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        .download-cv {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .download-cv:hover {
+            background: #2980b9;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav a {
+                display: block;
+                margin-bottom: 10px;
+            }
+            
+            section {
+                margin: 1rem 0;
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Channyung Lee</h1>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:cl104@illinois.edu">cl104@illinois.edu</a></span>
+                <span>📞 (+1) 217-419-1821</span>
+                <span>📍 104 S. Goodwin Ave. M/C 230, Urbana, IL, 61801</span>
+            </div>
             <nav>
                 <a href="#about">About</a>
+                <a href="#education">Education</a>
                 <a href="#research">Research</a>
                 <a href="#publications">Publications</a>
-                <a href="#cv">CV</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
+
     <section id="about" class="container">
-        <h2>About Me</h2>
+        <h2>Professional Summary</h2>
         <p>Materials scientist specializing in quantum computational chemistry and machine learning applications for fundamental science problems. Experienced in developing first-principles simulation frameworks to investigate transport mechanisms, electronic structures, and phase transformations across diverse material systems. Skilled in integrating density functional theory with machine learning approaches to accelerate materials discovery and understand complex reaction processes.</p>
     </section>
+
+    <section id="education" class="container">
+        <h2>Education & Experience</h2>
+        
+        <div class="education-item">
+            <h4>Ph.D. candidate in Mechanical Science and Engineering</h4>
+            <div class="education-meta">University of Illinois Urbana-Champaign (UIUC) | Jan. 2021 - Present | GPA: 3.95/4.00</div>
+            <p>Advisor: Prof. Elif Ertekin</p>
+        </div>
+
+        <div class="education-item">
+            <h4>MS in Mechanical Engineering</h4>
+            <div class="education-meta">Seoul National University (SNU) | Mar. 2018 - Feb. 2020 | GPA: 4.00/4.00</div>
+            <p>Advisor: Prof. Mansoo Choi</p>
+        </div>
+
+        <div class="education-item">
+            <h4>BS in Mechanical and Aerospace Engineering</h4>
+            <div class="education-meta">Seoul National University (SNU) | Mar. 2012 - Feb. 2018 | GPA: 3.72/4.00</div>
+        </div>
+
+        <h3>Internships</h3>
+
+        <div class="education-item">
+            <h4>Quantum Simulations Group</h4>
+            <div class="education-meta">Lawrence Livermore National Laboratory (LLNL) | Jun. 2023 - Aug. 2023</div>
+            <p>Supervisor: Dr. Joel B. Varley</p>
+        </div>
+
+        <div class="education-item">
+            <h4>Center for Energy Materials Research</h4>
+            <div class="education-meta">Korea Institute of Science and Technology (KIST) | Jan. 2020 - Dec. 2020</div>
+            <p>Supervisor: Prof. Hyoungchul Kim</p>
+        </div>
+    </section>
+
     <section id="research" class="container">
         <h2>Research Projects</h2>
-        <ul>
-            <li><b>Global Frontier R&D Program on Center for Multiscale Energy Systems</b> (2018-2020)<br>
-            Developed novel micro-patterning techniques using soft-lithography to enhance electrode-electrolyte interfaces in solid oxide fuel cells (SOFCs). Created data analysis tools for advanced electrochemical impedance spectroscopy (EIS).</li>
-            <li><b>Computational Modeling of Defect Equilibria in β-Ga2O3</b> (2021-2024)<br>
-            Created breakthrough approaches for commercialization through advanced defect engineering, providing unprecedented control over electronic properties in power devices.</li>
-            <li><b>Advanced Alloy Design: Defect Engineering in Complex Systems</b> (2023-Present)<br>
-            Led computational alloy design research focusing on energy prediction and defect thermodynamics in multi-component systems including high entropy alloys and disordered oxides.</li>
-        </ul>
+
+        <div class="research-item">
+            <h4>Advanced Alloy Design: Defect Engineering in Complex Systems (2023 IRG2)</h4>
+            <div class="research-meta">Illinois Materials Research Science and Engineering Center (I-MRSEC) | Jun. 2023 - Present</div>
+            <p>Led computational alloy design research focusing on energy prediction and defect thermodynamics in multi-component systems including high entropy alloys and disordered oxides. Developed first-principles frameworks to predict formation energies and defect equilibria in complex alloy systems, enabling rational design of materials with tailored transport and mechanical properties. Established quantitative structure-property relationships linking alloy composition, defect concentration, and macroscopic properties through integrated computational approaches.</p>
+        </div>
+
+        <div class="research-item">
+            <h4>Computational Modeling of Defect Equilibria in β-Ga2O3</h4>
+            <div class="research-meta">The Air Force Office of Scientific Research | Jun. 2021 - Dec. 2024</div>
+            <p>Created breakthrough approaches for commercialization through advanced defect engineering, providing unprecedented control over electronic properties in power devices. Developed comprehensive computational frameworks and MATLAB tools (KROGER) for quantitative modeling of defect concentrations in wide bandgap semiconductors, enabling precise prediction of electronic properties under various growth conditions.</p>
+        </div>
+
+        <div class="research-item">
+            <h4>MURI: β-Ga2O3 as a High-Critical Field Strength Material for Power Systems</h4>
+            <div class="research-meta">The Air Force Office of Scientific Research | Jun. 2021 - Dec. 2024</div>
+            <p>Investigated defect diffusion mechanisms in β-Ga2O3 using first-principles calculations and master diffusion equations. Established optimal doping strategies by determining formation energies and diffusion characteristics of acceptors and donors using first-principles calculations.</p>
+        </div>
+
+        <div class="research-item">
+            <h4>Global Frontier R&D Program on Center for Multiscale Energy Systems</h4>
+            <div class="research-meta">The Ministry of Science and ICT, Republic of Korea | Jan. 2018 - Dec. 2020</div>
+            <p>Developed novel micro-patterning techniques using soft-lithography to enhance electrode-electrolyte interfaces in solid oxide fuel cells (SOFCs). Created data analysis tools for advanced electrochemical impedance spectroscopy (EIS) with distribution of relaxation times (DRT) to precisely characterize interfacial processes in energy conversion devices.</p>
+        </div>
     </section>
+
+    <section id="skills" class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Quantum Computational Chemistry</h4>
+                <p>Density Functional Theory (VASP, Quantum ESPRESSO), Electronic Structure Calculations, Optical Calculations, Reaction Pathway Analysis, Temperature-dependent Properties</p>
+            </div>
+            <div class="skill-category">
+                <h4>Machine Learning for Chemistry</h4>
+                <p>Surrogate Models for Alloy Energy Predictions, Interatomic Potentials Development, Monte Carlo Methods, Data Analysis & Statistical Modeling, Open Source Tool Development (KROGER)</p>
+            </div>
+            <div class="skill-category">
+                <h4>Computational Modeling</h4>
+                <p>First-principles Simulations, Master Diffusion Equations, Defect Thermodynamics, Phase Transformation Modeling, Multi-scale Simulation Approaches</p>
+            </div>
+            <div class="skill-category">
+                <h4>Programming & Development</h4>
+                <p>Python, C, Matlab, R, LaTeX, High-performance Computing, Algorithm Development</p>
+            </div>
+            <div class="skill-category">
+                <h4>CAD & Analysis Tools</h4>
+                <p>Solidworks, CATIA, Abaqus, SEM, AFM, XRD, Photolithography, Impedance Spectroscopy (EIS)</p>
+            </div>
+        </div>
+    </section>
+
     <section id="publications" class="container">
         <h2>Publications</h2>
-        <ul>
-            <li>Lee, C. et al., "Electron-phonon effects and temperature-dependence of the electronic structure of monoclinic β-Ga2O3", APL Mater. (2023) <a href="https://aip.scitation.org/doi/full/10.1063/5.0131453" target="_blank">[Link]</a></li>
-            <li>Lee, C. et al., "Investigation of Ga interstitial and vacancy diffusion in β-Ga2O3 via split defects", Phys. Rev. Mater. (2024) <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.8.054603" target="_blank">[Link]</a></li>
-            <li>Lee, C. et al., "Unraveling the transformation pathway of the β to γ phase transition in Ga2O3 from atomistic simulations", Phys. Rev. Mater. (2025) <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.9.014601" target="_blank">[Link]</a></li>
-        </ul>
+
+        <div class="publication">
+            <strong>[15]</strong> <span class="equal-contribution">Channyung Lee≈</span>, Hong-Jyun Huang, Amir M. Orvati Movaffagh, Sara Kadkhodaei, Nicola H Perry, and Elif Ertekin*, "Defect Equilibria in SrTi1−xFexO3−δ Perovskite Alloys", <em>in prep.</em> (2025)
+        </div>
+
+        <div class="publication">
+            <strong>[14]</strong> <span class="equal-contribution">Channyung Lee≈</span>, Hong-Jyun Huang≈, Nicola H Perry, and Elif Ertekin*, "Magnetic and Structural Ordering in SrTi1−xCoxO3−δ Perovskite Alloys", <em>in prep.</em> (2025) <span class="equal-contribution">(≈ equal contribution)</span>
+        </div>
+
+        <div class="publication">
+            <strong>[13]</strong> <span class="equal-contribution">Andrew R Balog≈, Channyung Lee≈</span>, Elif Ertekin* and Nasim Alem*, "Scandium Occupancy and Extended Defect Formation in Alloyed β-(ScxGa1-x)2O3 Single Crystals", <em>in prep.</em> (2025) <span class="equal-contribution">(≈ equal contribution)</span>
+        </div>
+
+        <div class="publication">
+            <strong>[12]</strong> <strong>Channyung Lee</strong>, Michael A Scarpulla, Elif Ertekin*, and Joel B Varley*, "Diffusion of acceptor dopants in monoclinic β-Ga2O3", <em>Phys. Rev. Mater., in review</em> (2025)
+        </div>
+
+        <div class="publication">
+            <strong>[11]</strong> <span class="equal-contribution">Grace McKnight≈, Channyung Lee≈</span>, and Elif Ertekin*, "Investigation of O interstitial diffusion in β-Ga2O3: a direct approach via master diffusion equations", <em>Phys. Rev. B, accepted</em> (2025) <span class="equal-contribution">(≈ equal contribution)</span>
+        </div>
+
+        <div class="publication">
+            <strong>[10]</strong> A K M Ashiquzzaman Shawon, Ferdaushi Bipasha; <strong>Channyung Lee</strong>, Kamil Ciesielski, Brian Tijan, Eric Toberer, Elif Ertekin, and Alexandra Zevalkink, "Ag vacancies as 'killer-defects' in CaAgSb thermoelectrics", <em>ACS Appl. Energy Mater.</em> (2025)
+        </div>
+
+        <div class="publication">
+            <strong>[9]</strong> Khandakar Aaditta Arnab, Megan Stephens Isaac Maxfield, <strong>Channyung Lee</strong>, Elif Ertekin, Ymir Frodason, Joel B Varley, Mike Scarpulla*, "Quantitative Modeling of Point Defects in β-Ga2O3 Combining Hybrid Functional Energetics with Semiconductor and Processes Thermodynamics", <em>Phys. Chem. Chem. Phys., Accepted</em> (2025)
+        </div>
+
+        <div class="publication">
+            <strong>[8]</strong> <strong>Channyung Lee</strong>, Michael A Scarpulla, Joel B. Varley, and Elif Ertekin*, "Unraveling the transformation pathway of the β to γ phase transition in Ga2O3 from atomistic simulations", <em>Phys. Rev. Mater.</em> (2025) <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.9.014601" target="_blank">[Link]</a>
+        </div>
+
+        <div class="publication">
+            <strong>[7]</strong> Andrew R Balog*, <strong>Channyung Lee</strong>, Daniel Duarte-Ruiz, Sai Venkata Gayathri Ayyagari, Jani Jesenovec, Adrian E Chmielewski, Leixin Miao, Benjamin L Dutton, John McCloy, Caterina Cocchi, Elif Ertekin, and Nasim Alem*, "Determination of the β to γ Phase Transformation Mechanism in Sc- and Al-Alloyed β-Ga2O3 Crystals", <em>Appl. Electron. Mater.</em> (2024)
+        </div>
+
+        <div class="publication">
+            <strong>[6]</strong> <span class="equal-contribution">Emily J Skiba≈, Haley B Buckner≈, Channyung Lee≈, Grace McKnight≈</span>, Rachel F Wallick, Renske van der Veen, Elif Ertekin, and Nicola H Perry*, "UV-Driven Oxygen Surface Exchange and Stoichiometry Changes in a Thin-Film, Nondilute Mixed Ionic Electronic Conductor, Sr(Ti,Fe)O3−δ", <em>J. Am. Chem. Soc.</em> (2024) <span class="equal-contribution">(≈ equal contribution)</span>
+        </div>
+
+        <div class="publication">
+            <strong>[5]</strong> <strong>Channyung Lee</strong>, Michael A Scarpulla, and Elif Ertekin*, "Investigation of Ga interstitial and vacancy diffusion in β-Ga2O3 via split defects: A direct approach via master diffusion equations", <em>Phys. Rev. Mater.</em> (2024) <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.8.054603" target="_blank">[Link]</a>
+        </div>
+
+        <div class="publication">
+            <strong>[4]</strong> Hyeseong Jeong, <strong>Channyung Lee</strong>, Ji-Won Son, Seung Yong Lee, Kyung Joong Yoon, Dong Wook Shin, Mansoo Choi, Sung Soo Shin*, and Hyoungchul Kim*, "Advancing towards ready-to-use solid oxide fuel cells: 5-minute start-up with 1.1 W power at 600 °C", <em>J. Mater. Chem. A</em> (2023)
+        </div>
+
+        <div class="publication">
+            <strong>[3]</strong> <strong>Channyung Lee</strong>, Nathan D. Rock, Ariful Islam, Michael A. Scarpulla, and Elif Ertekin*, "Electron-phonon effects and temperature-dependence of the electronic structure of monoclinic β-Ga2O3", <em>APL Mater.</em> (2023) <a href="https://aip.scitation.org/doi/full/10.1063/5.0131453" target="_blank">[Link]</a>
+        </div>
+
+        <div class="publication">
+            <strong>[2]</strong> <span class="equal-contribution">Channyung Lee≈, Sung Soo Shin≈</span>, Jinhyeon Kim, Jiwoo Choi, Mansoo Choi*, and Hyun Ho Shin*, "Tailoring an Interface Microstructure for High-Performance Reversible Protonic Ceramic Electrochemical Cells via Soft Lithography", <em>ACS Appl. Mater. Interfaces</em> (2022) <span class="equal-contribution">(≈ equal contribution)</span>
+        </div>
+
+        <div class="publication">
+            <strong>[1]</strong> <strong>Channyung Lee</strong>, Sung Soo Shin, Jiwoo Choi, Jinhyeon Kim, Ji-Won Son, Mansoo Choi*, and Hyun Ho Shin*, "A micro-patterned electrode/electrolyte interface fabricated by soft-lithography for facile oxygen reduction in solid oxide fuel cells", <em>J. Mater. Chem. A</em> (2020)
+        </div>
     </section>
-    <section id="cv" class="container">
-        <h2>CV & Experience</h2>
-        <p><b>Education:</b><br>
-        Ph.D. candidate in Mechanical Science and Engineering, UIUC (2021 - Present)<br>
-        MS in Mechanical Engineering, Seoul National University (2018 - 2020)<br>
-        BS in Mechanical and Aerospace Engineering, Seoul National University (2012 - 2018)</p>
-        <p><b>Technical Skills:</b> Python, C, Matlab, R, LATEX, DFT (VASP, QE), Monte Carlo, ML for Materials</p>
-        <p><a href="CV_Channyung_AM (1).pdf" target="_blank">Download Full CV (PDF)</a></p>
-    </section>
+
     <section id="contact" class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:cl104@illinois.edu">cl104@illinois.edu</a></p>
-        <p><a href="https://scholar.google.com/citations?user=mW8w0G0AAAAJ" target="_blank">Google Scholar</a> | 
-           <a href="https://www.linkedin.com/in/channyung-lee-8269b0201" target="_blank">LinkedIn</a> | 
-           <a href="https://github.com/mikescarpulla/KROGER" target="_blank">GitHub</a></p>
+        <h2>Contact & Links</h2>
+        <p><strong>Email:</strong> <a href="mailto:cl104@illinois.edu">cl104@illinois.edu</a></p>
+        <p><strong>Phone:</strong> (+1) 217-419-1821</p>
+        <p><strong>Address:</strong> 104 S. Goodwin Ave. M/C 230, Urbana, IL, 61801</p>
+        
+        <p style="margin-top: 1.5rem;">
+            <a href="https://scholar.google.com/citations?user=mW8w0G0AAAAJ" target="_blank">Google Scholar</a> | 
+            <a href="https://www.linkedin.com/in/channyung-lee-8269b0201" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/mikescarpulla/KROGER" target="_blank">GitHub (KROGER Tool)</a>
+        </p>
+
+        <a href="CV_Channyung_AM (1).pdf" target="_blank" class="download-cv">Download Full CV (PDF)</a>
+
+        <h3>References</h3>
+        <div style="margin-top: 1rem;">
+            <p><strong>Prof. Elif Ertekin</strong><br>
+            Associate Professor, University of Illinois Urbana-Champaign<br>
+            📧 <a href="mailto:ertekin@illinois.edu">ertekin@illinois.edu</a></p>
+
+            <p style="margin-top: 1rem;"><strong>Prof. Michael A. (Mike) Scarpulla</strong><br>
+            Associate Professor, The University of Utah<br>
+            📧 <a href="mailto:scarpulla@ece.utah.edu">scarpulla@ece.utah.edu</a></p>
+
+            <p style="margin-top: 1rem;"><strong>Prof. Mansoo Choi</strong><br>
+            Professor Emeritus, Seoul National University<br>
+            📧 <a href="mailto:mchoi@snu.edu">mchoi@snu.edu</a></p>
+        </div>
     </section>
+
     <footer>
         <div class="container">
-            <p>© 2025 Channyung Lee</p>
+            <p>© 2025 Channyung Lee | Last Updated: July 22, 2025</p>
         </div>
     </footer>
 </body>
